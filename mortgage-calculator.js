@@ -2,7 +2,6 @@
 
 var homePrice, mortgagePeriod, interest, monthlyMortgage, downPayment;
 
-// add in down payment
 
 document.querySelector('.btn-calculate').addEventListener('click', function() {
   homePriceInput = document.querySelector('.home-price').value;
@@ -10,10 +9,22 @@ document.querySelector('.btn-calculate').addEventListener('click', function() {
   interestInput = document.querySelector('.interest').value;
   downPaymentInput = document.querySelector('.down-payment').value;
 
-  if (homePriceInput && mortgagePeriodInput && interestInput) {
+  if ( homePriceInput && mortgagePeriodInput && interestInput ) {
     calculate();
+  } else if ( homePriceInput && mortgagePeriodInput ) {
+    console.log('Please fill out the Interest!');
+  } else if ( homePriceInput && interestInput ) {
+    console.log('Please fill out the Mortgage Period!');
+  } else if ( mortgagePeriodInput && interestInput ) {
+    console.log('Please fill out the Home Price!');
+  } else if ( homePriceInput ) {
+    console.log('Please fill out the Mortgage Period and Interest!');
+  } else if (mortgagePeriodInput) {
+    console.log('Please fill out the Home Price and Interest!');
+  } else if ( interestInput ) {
+    console.log('Please fill out Home Price and Mortgage Period!');
   } else {
-    console.log('Please fill out all values!')
+    console.log('Please fill out all Home Price, Mortgage Period and Interest!')
   }
 
 });
@@ -28,5 +39,4 @@ function calculate() {
     mortgagePeriod) / ( Math.pow(( 1 + monthlyInterest ), mortgagePeriod ) - 1 )))
 
   console.log(monthlyMortgage);  
-  //add in display box
 };
