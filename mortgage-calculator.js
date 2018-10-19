@@ -24,19 +24,18 @@ document.querySelector('.btn-calculate').addEventListener('click', function() {
   } else if ( interestInput ) {
     console.log('Please fill out Home Price and Mortgage Period!');
   } else {
-    console.log('Please fill out all Home Price, Mortgage Period and Interest!')
+    console.log('Please fill out all Home Price, Mortgage Period and Interest!');
   }
-
-});
+  });
 
 function calculate() {
   interest = interestInput / 100;
   monthlyInterest = interest / 12;
   mortgagePeriod = mortgagePeriodInput * 12;
-  mortgageStartingValue = homePriceInput - downPaymentInput
+  mortgageStartingValue = homePriceInput - downPaymentInput;
 
   monthlyMortgage = mortgageStartingValue * ( monthlyInterest * ( Math.pow((1 + monthlyInterest), 
-    mortgagePeriod) / ( Math.pow(( 1 + monthlyInterest ), mortgagePeriod ) - 1 )))
+    mortgagePeriod) / ( Math.pow(( 1 + monthlyInterest ), mortgagePeriod ) - 1 )));
 
   console.log(monthlyMortgage);  
 };
