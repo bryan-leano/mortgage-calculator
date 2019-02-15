@@ -34,8 +34,9 @@ function calculate() {
   mortgagePeriod = mortgagePeriodInput * 12;
   mortgageStartingValue = homePriceInput - downPaymentInput;
 
-  monthlyMortgage = mortgageStartingValue * ( monthlyInterest * ( Math.pow((1 + monthlyInterest), 
-    mortgagePeriod) / ( Math.pow(( 1 + monthlyInterest ), mortgagePeriod ) - 1 )));
+  monthlyMortgage = mortgageStartingValue * ( monthlyInterest * ( Math.pow((1 + monthlyInterest), mortgagePeriod) / ( Math.pow(( 1 + monthlyInterest ), mortgagePeriod ) - 1 )));
 
   console.log(monthlyMortgage);  
+  var displayMortgage = document.getElementById('mortgage');
+  displayMortgage.innerHTML = `Your mortgage will be: ${monthlyMortgage}`;
 };
