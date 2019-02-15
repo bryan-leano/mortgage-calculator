@@ -36,7 +36,13 @@ function calculate() {
 
   monthlyMortgage = mortgageStartingValue * ( monthlyInterest * ( Math.pow((1 + monthlyInterest), mortgagePeriod) / ( Math.pow(( 1 + monthlyInterest ), mortgagePeriod ) - 1 )));
 
+  monthlyMortgage = Math.round(monthlyMortgage * 100) / 100;
+
+  showMortgage();
+};
+
+function showMortgage() {
   console.log(monthlyMortgage);  
   var displayMortgage = document.getElementById('mortgage');
-  displayMortgage.innerHTML = `Your mortgage will be: ${monthlyMortgage}`;
-};
+  displayMortgage.innerHTML = `Your mortgage will be: $${monthlyMortgage}`;
+}
