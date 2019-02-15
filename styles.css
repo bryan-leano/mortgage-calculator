@@ -3,3 +3,22 @@ body {
   background-repeat: no-repeat;
   background-size: 100%
 }
+
+.wrapper {
+  width: 700px;
+  height: 500px;
+  overflow: hidden;
+  background-color: rgba(158, 153, 153, 0.6);
+}
+
+.form {
+  text-align: center;
+}
+
+.heading {
+  color: #b33939
+}
+
+.font-box {
+  font-size:14pt;
+}

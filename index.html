@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Bryan's Mortgage Calculator</title>
+    <link rel="shortcut icon" href="img/home-icon.png">
     <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <h1>Bryan's Mortgage Calculator</h1>
-    <p>Calculate what your mortgage will be</p>
 
-      <input text="text" placeholder="Home price" class="home-price">
-      <input text="text" placeholder="Mortgage period (years)" class="mortgage-period">
-      <input text="text" placeholder="Interest rate (percent)" class="interest">
-      <input text="text" placeholder="Down payment" class="down-payment">
+    <div class="wrapper">
 
-    <p>
-      <button class="btn-calculate">Calculate</button>
-    </p>
+      <div class="form">
+        <div class="heading">
+          <h1>Bryan's Mortgage Calculator</h1>
+          <h2>Calculate what your mortgage will be</h2>
+        </div>
 
-    <h1 id="mortgage">Your mortgage will be:</h1>
+       <br> 
 
+      <form class="heading">
+        Home Price<br>
+        <input text="text" placeholder="Home price" class="home-price font-box"><br>
+        Mortgage Period (years)<br>
+        <input text="text" placeholder="Mortgage period (years)" class="mortgage-period font-box"><br>
+        Interest<br>
+        <input text="text" placeholder="Interest rate (percent)" class="interest font-box"><br>
+        Down Payment<br>
+        <input text="text" placeholder="Down payment" class="down-payment font-box"><br>
+      </form>
+
+      <p>
+        <button class="btn-calculate">Calculate</button>
+      </p>
+
+      <br>
+
+      <h1 id="mortgage" class="heading"></h1>
+
+      </div>
+    </div>  
+    
 
   <script src="mortgage-calculator.js"></script>
   </body>
